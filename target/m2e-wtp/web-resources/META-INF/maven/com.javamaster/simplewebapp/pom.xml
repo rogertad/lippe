@@ -65,7 +65,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId> 
 				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
+				<executions> 
 					<execution>
 						<phase>package</phase>
 						<goals>
