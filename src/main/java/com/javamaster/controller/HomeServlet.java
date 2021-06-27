@@ -39,10 +39,10 @@ public class HomeServlet extends HttpServlet {
 		
 		Article art = new Article();
 		art.setBody("UM teste qq ");
-		art.setCategory(new Category());
+		Category cat = new Category();
+		cat.setId(1);
+		art.setCategory(cat);
 		art.setTitle("sdwd");
-		
-		
 		articleDao.createArticle(art);
 		
 		if (path.equals("/")){
