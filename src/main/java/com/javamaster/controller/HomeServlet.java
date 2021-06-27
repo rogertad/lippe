@@ -1,6 +1,7 @@
 package com.javamaster.controller;
 
 import java.io.IOException;
+import java.security.Timestamp;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -35,6 +36,15 @@ public class HomeServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String path = request.getServletPath();
+		
+		Article art = new Article();
+		art.setBody("UM teste qq ");
+		art.setCategory(new Category());
+		art.setTitle("sdwd");
+		
+		
+		articleDao.createArticle(art);
+		
 		if (path.equals("/")){
 			List<Article> articles = articleDao.getAllArticles();
 			request.setAttribute("title", "Title of our application");
