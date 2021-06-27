@@ -110,7 +110,7 @@
 				<article class="col-xs-12">
 					<h2>${article.title }</h2>
 					<p>${article.body }</p>
-					<p><button class="btn btn-default">Read More</button></p>
+					<p><button class="btn btn-default">LEIA MAIS</button></p>
 				</article>
 			</div>
 			<hr>
