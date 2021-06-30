@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/EuEstouAqui2")
 public class EuEstouAqui2 extends HttpServlet {
+	/**
+	 *
+	 */
+	private static final String G_I_T_EU_ESTOU_AQUI = "====== rvr===========EU ESTOU AQUI!!!";
 	private static final long serialVersionUID = 1L;
        
     /**
@@ -41,7 +45,7 @@ public class EuEstouAqui2 extends HttpServlet {
 			
 		}
 				
-		out.print("======  ====G I T============EU ESTOU AQUI!!!" + " " + a);
+		out.print(G_I_T_EU_ESTOU_AQUI + " " + a);
 		
 	}
 
