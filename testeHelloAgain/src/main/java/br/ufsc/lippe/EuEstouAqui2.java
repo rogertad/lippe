@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/EuEstouAqui2")
 public class EuEstouAqui2 extends HttpServlet {
+	/**
+	 *
+	 */
+	private static final String G_I_T_EU_ESTOU_AQUI = "====== OOOOOO===========EU ESTOU AQUI!!!";
 	private static final long serialVersionUID = 1L;
        
     /**
