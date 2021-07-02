@@ -41,7 +41,7 @@ public class EuEstouAqui2 extends HttpServlet {
 			
 		}
 				
-		out.print("======  ====G I T============EU ESTOU AQUI!!!" + " " + a);
+		out.print("vc digitou nome = " + " " + a);
 		
 	}
 
