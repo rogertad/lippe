@@ -12,6 +12,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 
 import br.ufsc.lippe.data.PautaVideo;
@@ -48,11 +52,11 @@ public class controlPauta extends HttpServlet {
 		String descr = request.getParameter("pautaDescr");
 		String tema = request.getParameter("pautaTema");
 
-		if (descr == null || tema==null) {
-			//a = "...sem parametros...";
+		if (descr == null || tema == null) {
+			// a = "...sem parametros...";
 			out.print("NAO RECEBI PARAMS");
 		} else {
-			
+
 			PautaVideoDAO dao = new PautaVideoDAO();
 
 			// Add new user
@@ -61,13 +65,20 @@ public class controlPauta extends HttpServlet {
 			pauta.setTema(tema);
 			dao.addPauta(pauta);
 
+			// JSONObject pautaObj = new JSONObject();
+			// JSONArray userList = new JSONArray();
+			// userList.add(pautaObj);
+
 			// Get all users
 			for (PautaVideo iter : dao.getAllPautas()) {
 				out.println(iter);
+				ObjectMapper mapper = new ObjectMapper();
+				String jsonString = mapper.writeValueAsString(iter);
+				out.println(jsonString);
 			}
 
 			// Get user by id
-			out.println("retornei: "+dao.getPautaById(11).toString());
+			out.println("retornei: " + dao.getPautaById(11).toString());
 
 		}
 
