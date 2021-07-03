@@ -3,7 +3,7 @@
  "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
  "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-	<session-factory>
+	<session-factory> 
 		<!-- Database connection settings -->
 		<property name="connection.driver_class">org.postgresql.Driver</property>
 		<property name="connection.url">jdbc:postgresql://ec2-54-217-250-0.eu-west-1.compute.amazonaws.com:5432/ddhv1jhbdt1c6t?sslmode=require</property>
