@@ -32,7 +32,9 @@
 		<property name="hbm2ddl.auto">update</property>
 
 		<!-- Mapping files -->
-		<mapping resource="user.hbm.xml" />
+		<!-- mapping resource="user.hbm.xml" /-->
+		
+		<mapping class="com.daniel.model.User2" /> 
 
 	</session-factory>
 </hibernate-configuration>

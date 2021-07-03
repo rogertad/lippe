@@ -2,13 +2,30 @@ package com.daniel.model;
 
 import java.util.Date;
 
-public class User {
+import javax.persistence.*;
 
+
+@Entity
+@Table(name ="user222")
+public class User2 {
+
+	@Id @GeneratedValue
+	@Column(name = "userid")
 	private int userid;
+	
+	@Column(name = "firstname")
 	private String firstName;
+	
+	@Column(name = "lastname")
 	private String lastName;
+	
+	@Column(name = "dob")
 	private Date dob;
+	
+	@Column(name = "email")
 	private String email;
+	
+	
 	public int getUserid() {
 		return userid;
 	}

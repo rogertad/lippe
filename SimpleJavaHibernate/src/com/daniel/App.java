@@ -5,7 +5,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.Date;
 import com.daniel.dao.UserDao;
-import com.daniel.model.User;
+import com.daniel.model.User2;
 
 public class App {   //frfrefeed
    
@@ -13,7 +13,7 @@ public class App {   //frfrefeed
 		UserDao dao = new UserDao();
 
 		// Add new user
-		User user = new User();
+		User2 user = new User2();
 		user.setFirstName("Daniel");
 		user.setLastName("Niko");
 		try {
@@ -34,7 +34,7 @@ public class App {   //frfrefeed
 		// dao.deleteUser(1);
 
 		// Get all users
-		for (User iter : dao.getAllUsers()) {
+		for (User2 iter : dao.getAllUsers()) {
 			System.out.println(iter);
 		}
 
