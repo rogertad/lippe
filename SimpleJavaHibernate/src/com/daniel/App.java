@@ -7,8 +7,8 @@ import java.util.Date;
 import com.daniel.dao.UserDao;
 import com.daniel.model.User;
 
-public class App {
-
+public class App {   //frfr
+   
 	public static void main(String[] args) {
 		UserDao dao = new UserDao();
 
